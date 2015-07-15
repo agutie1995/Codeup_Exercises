@@ -1,14 +1,13 @@
 <?php
 
-// $a = 10;
-// $b = 2;
-
 function add($a, $b)
 {
     if (is_numeric($a) && is_numeric($b)) {
         return $a + $b;
-    } else {
-        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    } else if ($a != is_numeric($a)) {
+        return "Error: '$a' is an invalid input" . PHP_EOL;
+    } else if ($b != is_numeric($b)) {
+        return "Error: '$b' is an invalid input" . PHP_EOL; 
     }
 }
 
@@ -16,8 +15,10 @@ function subtract($a, $b)
 {
     if (is_numeric($a) && is_numeric($b)) {
         return $a - $b;
-    } else {
-        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    } else if ($a != is_numeric($a)) {
+        return "Error: '$a' is an invalid input" . PHP_EOL;
+    } else if ($b != is_numeric($b)) {
+        return "Error: '$b' is an invalid input" . PHP_EOL; 
     }
 }
 
@@ -25,43 +26,48 @@ function multiply($a, $b)
 {
     if (is_numeric($a) && is_numeric($b)) {
         return $a * $b;
-    } else {
-        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    } else if ($a != is_numeric($a)) {
+        return "Error: '$a' is an invalid input" . PHP_EOL;
+    } else if ($b != is_numeric($b)) {
+        return "Error: '$b' is an invalid input" . PHP_EOL; 
     }
 }
 
 function divide($a, $b)
 {
-    if ($b == 0) {
+    if ($b === 0) {
         return "ERROR: Cannot divide by 0." . PHP_EOL;
     } else if (is_numeric($a) && is_numeric($b)){
         return $a / $b;
-    } else {
-        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    } else if ($a != is_numeric($a)) {
+        return "Error: '$a' is an invalid input" . PHP_EOL;
+    } else if ($b != is_numeric($b)) {
+        return "Error: '$b' is an invalid input" . PHP_EOL; 
     }
 }
 
 function modulus($a, $b)
 {
-    if ($b == 0) {
+    if ($b === 0) {
         return "ERROR: Cannot divide by 0." . PHP_EOL;
     } else if (is_numeric($a) && is_numeric($b)){
         return $a % $b;
-    } else {
-        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    } else if ($a != is_numeric($a)) {
+        return "Error: '$a' is an invalid input" . PHP_EOL;
+    } else if ($b != is_numeric($b)) {
+        return "Error: '$b' is an invalid input" . PHP_EOL; 
     }
 }
 
-echo add(10, 5) . PHP_EOL;
+echo add('anotherstring', 5) . PHP_EOL;
 
-echo subtract(20, 4) . PHP_EOL;
+echo subtract(20, 'string') . PHP_EOL;
 
-echo multiply(4, 3) . PHP_EOL;
+echo multiply('pam', 3) . PHP_EOL;
 
-echo divide(100, 0) . PHP_EOL;
+echo divide(100, 'jim') . PHP_EOL;
 
-echo modulus(10, 0) . PHP_EOL;
-
+echo modulus(10, 'alex') . PHP_EOL;
 
 
 //Validate all the arguments, and display an error if the input is not numeric.
