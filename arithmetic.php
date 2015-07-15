@@ -32,7 +32,9 @@ function multiply($a, $b)
 
 function divide($a, $b)
 {
-    if (is_numeric($a) && is_numeric($b)) {
+    if ($b == 0) {
+        return "ERROR: Cannot divide by 0." . PHP_EOL;
+    } else if (is_numeric($a) && is_numeric($b)){
         return $a / $b;
     } else {
         return "ERROR: Both arguments must be numbers." . PHP_EOL;
@@ -41,7 +43,9 @@ function divide($a, $b)
 
 function modulus($a, $b)
 {
-    if (is_numeric($a) && is_numeric($b)) {
+    if ($b == 0) {
+        return "ERROR: Cannot divide by 0." . PHP_EOL;
+    } else if (is_numeric($a) && is_numeric($b)){
         return $a % $b;
     } else {
         return "ERROR: Both arguments must be numbers." . PHP_EOL;
@@ -54,9 +58,9 @@ echo subtract(20, 4) . PHP_EOL;
 
 echo multiply(4, 3) . PHP_EOL;
 
-echo divide(100, 50) . PHP_EOL;
+echo divide(100, 0) . PHP_EOL;
 
-echo modulus(10, 2) . PHP_EOL;
+echo modulus(10, 0) . PHP_EOL;
 
 
 
