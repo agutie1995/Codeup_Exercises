@@ -1,51 +1,67 @@
 <?php
 
-$a = 10;
-$b = 2;
+// $a = 10;
+// $b = 2;
 
 function add($a, $b)
 {
-    return $a + $b;
+    if (is_numeric($a) && is_numeric($b)) {
+        return $a + $b;
+    } else {
+        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    }
 }
 
 function subtract($a, $b)
 {
-    return $a - $b;
+    if (is_numeric($a) && is_numeric($b)) {
+        return $a - $b;
+    } else {
+        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    }
 }
 
 function multiply($a, $b)
 {
-    return $a * $b;
+    if (is_numeric($a) && is_numeric($b)) {
+        return $a * $b;
+    } else {
+        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    }
 }
 
 function divide($a, $b)
 {
-    return $a / $b;
+    if (is_numeric($a) && is_numeric($b)) {
+        return $a / $b;
+    } else {
+        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    }
 }
 
 function modulus($a, $b)
 {
-	return $a % $b;
+    if (is_numeric($a) && is_numeric($b)) {
+        return $a % $b;
+    } else {
+        return "ERROR: Both arguments must be numbers." . PHP_EOL;
+    }
 }
 
-// echo add(5, 10) . PHP_EOL;
+echo add(10, 5) . PHP_EOL;
 
-// echo subtract(20, 4) . PHP_EOL;
+echo subtract(20, 4) . PHP_EOL;
 
-// echo multiply(4, 3) . PHP_EOL;
+echo multiply(4, 3) . PHP_EOL;
 
-// echo divide(100, 50) . PHP_EOL;
+echo divide(100, 50) . PHP_EOL;
 
-// echo modulus(10, 2) . PHP_EOL;
+echo modulus(10, 2) . PHP_EOL;
 
 
 
-// Fill in the // Add code here blocks to make each function echo the proper result.
-// Add code after functions that calls each function with real numbers.
-// Verify the output of each test.
-// Add a function modulus that finds the modulus of 2 numbers.
-// Add test code and verify the output of modulus.
-// Create variables $a and $b at the top of your script and give them different values.
-	// Watch what happens (or, does not happen) to your function output as you set and modify $a & $b outside of your functions.
-	// Think carefully about how this behavior differs from the way JavaScript handles variables.
+//Validate all the arguments, and display an error if the input is not numeric.
+//Validate divide by 0 errors, display error if attempts to divide by 0 are made.
+//Make the error messages show the values of the arguments.
+//Refactor the error messages into their own function, have the other functions use it for error messaging.
 ?>
