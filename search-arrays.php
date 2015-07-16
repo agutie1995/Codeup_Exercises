@@ -29,6 +29,18 @@ if (isInArray('Bob', $names)){
     echo "Bob is not in the array" . PHP_EOL;
 }
 
-//Create a function to compare 2 arrays that returns the number of values in common between the arrays.
+//Create a function to compare 2 arrays that returns the NUMBER (2) of values in common between the arrays.
     //Use the 2 example arrays and make sure your solution uses array_search().
+    //SHOULD RETURN AN INTEGER
+function compareArrays($names, $compare){
+    $inCommon = 0;
+    foreach ($names as $key => $value){
+        $compareSearch = array_search($value, $compare);
+        if ($compareSearch !== false){
+            $inCommon++;
+        }
+    }
+    return "The arrays have {$inCommon} names in common." . PHP_EOL;
+}
+echo compareArrays($names, $compare);
 ?>
