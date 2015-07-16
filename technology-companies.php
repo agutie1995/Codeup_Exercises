@@ -63,7 +63,7 @@ $companies = [
 
 //Sort the companies from "biggest" to "smallest".
     //This may be easier than you think, but be sure you don't loose the company names!
-arsort($companies);
+sort($companies);
 print_r($companies);
 
 ?>
