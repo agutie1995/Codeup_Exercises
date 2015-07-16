@@ -46,7 +46,7 @@ $companies = [
 ];
 
 //Add code to output the $companies array in its current form.
-// print_r($companies);
+print_r($companies);
 
 //Sort the $companies array by company name and output the results.
 //Sort the people in each company alphabetically.
