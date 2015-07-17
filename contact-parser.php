@@ -1,6 +1,4 @@
 <?php
-$filename  = 'contacts.txt';
-
 function parseContacts($filename){
     $contacts = array();
     // todo - read file and parse contacts
