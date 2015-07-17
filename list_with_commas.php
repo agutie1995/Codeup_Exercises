@@ -18,6 +18,7 @@
 
 //Converts array into list n1, n2, ..., and n3
 function humanizedList($physicistsArray) {
+    sort($physicistsArray);
     $lastItem = array_pop($physicistsArray);
     array_push($physicistsArray, 'and ');
     $humanizedList = implode(', ', $physicistsArray) . $lastItem;
