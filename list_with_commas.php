@@ -17,8 +17,10 @@
     //You should be able to pass the $physicistsArray as the only argument, and your function will return the result.
 
 //Converts array into list n1, n2, ..., and n3
-function humanizedList($physicistsArray) {
-    sort($physicistsArray);
+function humanizedList($physicistsArray, $sort = false) {
+    if ($sort){
+        sort($physicistsArray);
+    }
     $lastItem = array_pop($physicistsArray);
     array_push($physicistsArray, 'and ');
     $humanizedList = implode(', ', $physicistsArray) . $lastItem;
@@ -32,15 +34,11 @@ $physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mall
 $physicistsArray = explode(', ', $physicistsString);
 
 //Humanize that list
-$famousFakePhysicists = humanizedList($physicistsArray);
+$famousFakePhysicists = humanizedList($physicistsArray, false);
 
 //Output sentence
 echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}.";
 
-
-//Update your code to list the physicists by first name, in alphabetical order.
-
 //Create a second argument to make alphabetical sorting optional.
-
-//Default alphabetical sorting to false. If no args are passed, no sorting takes place.
+    //Default alphabetical sorting to false. If no args are passed, no sorting takes place.
 ?>
