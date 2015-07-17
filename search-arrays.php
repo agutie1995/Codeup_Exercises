@@ -40,7 +40,7 @@ function compareArrays($names, $compare){
             $inCommon++;
         }
     }
-    return "The arrays have {$inCommon} names in common." . PHP_EOL;
+    return $inCommon . PHP_EOL;
 }
 echo compareArrays($names, $compare);
 ?>
