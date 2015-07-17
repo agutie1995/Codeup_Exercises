@@ -1,22 +1,20 @@
 <?php
 //Create the $famousFakePhysicists string that lists the physicists and contains the "and" at the end.
     //Use push, pop, explode, and implode
-// $physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
+$physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
 
-// $physicistsArray = explode(', ', $physicistsString);
-// $lastItem = array_pop($physicistsArray);
-// array_push($physicistsArray,'and' );
-// //var_dump($physicistsArray);
+$physicistsArray = explode(', ', $physicistsString);
+$lastItem = array_pop($physicistsArray);
+array_push($physicistsArray,'and' );
+//var_dump($physicistsArray);
 
-// $famousFakePhysicists = implode(', ', $physicistsArray);
+$famousFakePhysicists = implode(', ', $physicistsArray);
 
-// echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists} {$lastItem}.";
+echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists} {$lastItem}." . PHP_EOL;
 
 
 //Turn your solution into a function named humanizedList().
     //You should be able to pass the $physicistsArray as the only argument, and your function will return the result.
-
-//Converts array into list n1, n2, ..., and n3
 function humanizedList($physicistsArray, $sort = false) {
     if ($sort){
         sort($physicistsArray);
@@ -34,11 +32,8 @@ $physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mall
 $physicistsArray = explode(', ', $physicistsString);
 
 //Humanize that list
-$famousFakePhysicists = humanizedList($physicistsArray, false);
+$famousFakePhysicists = humanizedList($physicistsArray, true);
 
 //Output sentence
-echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}.";
-
-//Create a second argument to make alphabetical sorting optional.
-    //Default alphabetical sorting to false. If no args are passed, no sorting takes place.
+echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}." . PHP_EOL;
 ?>
