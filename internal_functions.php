@@ -4,31 +4,30 @@
 function inspect($a){
     if (is_array($a)){
         if(empty($a)){
-            return "The value is an empty array.";
+            return "The value is an empty array." . PHP_EOL;
         } else {
-            return "The value is an array.";
+            return "The value is an array." . PHP_EOL;
         }
     } else if (is_bool($a)){
         if ($a){
-            return "The boolean is true.";
+            return "The boolean is true." . PHP_EOL;
         } else{
-            return "The boolean is false.";
+            return "The boolean is false." . PHP_EOL;
         }
     } else if (is_int($a)){
-        return "The int is {$a}.";
+        return "The int is {$a}." . PHP_EOL;
     } else if (is_string($a)){
         if (empty($a)){
-            return "The string is empty.";
+            return "The string is empty." . PHP_EOL;
         } else {
-            return "The string is {$a}.";
+            return "The string is {$a}." . PHP_EOL;
         }
     } else if(is_float($a)){
-        return "The float is {$a}.";
+        return "The float is {$a}." . PHP_EOL;
     } else if (is_null($a)){
-        return "The value is NULL.";
+        return "The value is NULL." . PHP_EOL;
     }
 }
-
 
 // Do not mofify these variables!
 $string1 = "I'm a little teapot";
