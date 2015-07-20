@@ -7,8 +7,9 @@
     //Log entries should match the format: YYYY-MM-DD HH:MM:SS [LEVEL] MESSAGE
 function logMessage($logLevel, $message)
 {
+    date_default_timezone_set('America/Chicago');
     $date = date("Y-m-d");
-    $logDayTime = date("Y-m-d h:i:s a");
+    $logDayTime = date("Y-m-d h:i:s a e");
     $filename = "log-{$date}.log";
     $handle = fopen($filename, "a");
     $log = "{$logDayTime} [{$logLevel}] {$message}" . PHP_EOL;
