@@ -1,13 +1,13 @@
 <?php
 require_once 'Log.php';
 
-$date = date("Y-m-d");
-$log = new Log();
-$log->filename = "log-{date}.log";
+$test = new Log();
+$test->date = date("Y-m-d");
+$test->filename = "log-{$test->date}.log";
 
-$log->info("Log Info");
-$log->error("Log Error");
-$log->logMessage($logLevel, "log message");
+$test->info("Login Successful");
+$test->error("Login failed");
+$test->logMessage("INFO", "log message");
 
 //Create an instance of the Log class
 //Set the $filename property in the class; use the format log-YYYY-MM-DD.log.
