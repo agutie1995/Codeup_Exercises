@@ -32,13 +32,11 @@ class Log
 
     public function info($message)
     {
-        $logLevel = 'INFO';
         return $this->logMessage('INFO', $message);
     }
 
     public function error($message)
     {
-        $logLevel = 'ERROR';
         return $this->logMessage('ERROR', $message);
     }
 }
