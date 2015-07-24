@@ -1,7 +1,7 @@
 <?php
 require_once 'Log.php';
 
-$test = new Log();
+$test = new Log('cli');
 $test->info("Login Successful");
 $test->error("Login failed");
 $test->logMessage("INFO", "log message");
