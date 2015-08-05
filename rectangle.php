@@ -7,8 +7,16 @@ class Rectangle
 
 	public function __construct($width, $height)
 	{
-		$this->width = $width;
-		$this->height = $height;
+		$this->setWidth($width);
+		$this->setHeight($height);
+	}
+
+	public function setWidth(){
+		return $this->width = trim($width);
+	}
+
+	public function setHeight(){
+		return $this->height = trim($height);
 	}
 
 	public function area()
