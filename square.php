@@ -14,6 +14,10 @@ class Square extends Rectangle
 		return $this->width = trim($width);
 	}
 
+	public function getWidth(){
+		return $this->width;
+	}
+
 	public function perimeter()
 	{
 		return ($this->width * 4);
