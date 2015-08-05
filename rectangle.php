@@ -5,7 +5,7 @@ class Rectangle
 	public $width;
 	public $height;
 
-	public function __construct($width, $height)
+	public function __construct($width, $height = 1)
 	{
 		$this->width = $width;
 		$this->height = $height;
