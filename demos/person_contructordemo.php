@@ -12,7 +12,25 @@ class Person
         $this->firstName = $firstName;
         $this->lastName = $lastName;
     }
+
+    public function fullName()
+    {
+    	return $this->firstName . ' ' . $this->lastName;
+    }
 }
 
-$pinnochio = new Person('Pinnochio', 'Calvini');
-echo "I am {$pinnochio->firstname} {$pinnochio->lastName}" . PHP_EOL;
+class Superhero extends Person
+{
+    public $pseudonym;
+    public $capeColor;
+
+    public function alterEgo()
+    {
+        return 'Top Secret Alternate Ego: ' . $this->fullName();
+    }
+
+    public function hasCape()
+    {
+        return !empty($this->capeColor);
+    }
+}
