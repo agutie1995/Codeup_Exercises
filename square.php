@@ -7,7 +7,7 @@ class Square extends Rectangle
 	public function __construct($width)
 	{
 		parent::__construct($width, $width);
-		$this->setWidth($width);
+		$this->width = $width;
 	}
 
 	public function setWidth(){

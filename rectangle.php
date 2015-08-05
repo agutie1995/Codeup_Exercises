@@ -2,13 +2,13 @@
 
 class Rectangle
 {
-	private $width;
-	private $height;
+	protected $width;
+	protected $height;
 
 	public function __construct($width, $height)
 	{
-		$this->setWidth($width);
-		$this->setHeight($height);
+		$this->width = $width;
+		$this->height = $height;
 	}
 
 	public function setWidth(){
