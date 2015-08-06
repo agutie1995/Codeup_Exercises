@@ -4,6 +4,7 @@ class Model
 {
 // An attributes property (array) that is not visible outside of the class
 	protected $attributes = [];
+    protected static $table = 'table';
 
 // A magic setter to create key/value pairs in the attributes array.
 	public function __set($key, $value)
@@ -19,15 +20,20 @@ class Model
     	}
     	return NULL;
     }
+
+    public static function getTableName() 
+    {
+        return static::$table;
+    }
 }
 // Test your new Model class by adding key/value pairs and retrieving them
-$captainAmerica = new Model;
-$captainAmerica->flight = 'No';
-$captainAmerica->heatVision = 'No';
-$captainAmerica->underwaterBreathing = 'No';
-$captainAmerica->superStrength = 'Yes';
+// $captainAmerica = new Model;
+// $captainAmerica->flight = 'No';
+// $captainAmerica->heatVision = 'No';
+// $captainAmerica->underwaterBreathing = 'No';
+// $captainAmerica->superStrength = 'Yes';
 
-echo $captainAmerica->flight . PHP_EOL;
-echo $captainAmerica->heatVision . PHP_EOL;
-echo $captainAmerica->underwaterBreathing . PHP_EOL;
-echo $captainAmerica->superStrength . PHP_EOL;
+// echo $captainAmerica->flight . PHP_EOL;
+// echo $captainAmerica->heatVision . PHP_EOL;
+// echo $captainAmerica->underwaterBreathing . PHP_EOL;
+// echo $captainAmerica->superStrength . PHP_EOL;
